@@ -1,0 +1,257 @@
+html {
+  scroll-behavior: auto !important;
+}
+
+::selection {
+  background-color: #005970;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #212529;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+header nav {
+  height: 70px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+footer {
+  background-color: #343a40;
+  color: rgba(255,255,255,.55);
+}
+
+footer h3 {
+  color: rgba(255,255,255,.55);
+}
+
+footer ul {
+  padding-left: 0rem;
+}
+
+footer ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* Here we're gonna have cusotm classes, ids and so on */
+
+/* Measurment classes */
+
+.minHeight--auto {
+  padding: 90px 0px;
+  min-height: auto;
+}
+
+.custom--minHeight {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom--positioned {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: 999 !important;
+}
+
+.nav-hidden {
+  display: none;
+}
+
+/* Components' classes */
+
+.rating--stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating--stars p {
+  margin-bottom: 0rem;
+  margin-right: 5px;
+}
+
+.rating--stars > div:nth-child(2) p:last-child {
+  color: #000;
+  margin-top: .1rem;
+}
+
+.custom--centered--btn {
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  z-index: 9;
+}
+
+.related--products {
+  padding-top: 40px;
+  height: auto;
+}
+
+.form--card {
+  background-color: #fff;
+  border: 1px solid #c2c5e149;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 430px !important;
+}
+
+.input-group {
+  position: relative;
+}
+
+.password-show {
+  position: absolute;
+  top: 58%;
+  right: 5%;
+  fill: #005970;
+  font-size: 20px;
+}
+
+.scrollUp {
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99 !important;
+  animation: .1s animateUp ease-out;
+}
+
+.p-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.sb-rs {
+  display: flex;
+  justify-content: center;
+}
+
+.product-card .card {
+  width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.product-card .card .card-image-flexed {
+  width: 100%;
+  height: 190px;
+  max-height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.custom-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 315px;
+}
+
+td {
+  min-height: 75px !important;
+}
+
+.react-tabs {
+  padding-bottom: 40px;
+  min-height: 80vh;
+}
+
+.react-tabs__tab-list {
+  padding-left: 0rem;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  margin: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected .btn-primary {
+  background-color: #0054d3 !important;
+  border-color: #0054d3 !important;
+}
+
+.react-tabs__tab-panel--selected {
+  animation: animateUp .5s ease-out;
+}
+
+@keyframes animateUp {
+  from {
+    transform: translateY(40px) scale(.8);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+@media screen and (max-width: 530px) {
+  .form--card {
+    width: 350px !important;
+  }
+  .react-tabs__tab {
+    width: 140px;
+  }
+  .nav-hidden {
+    display: block;
+  }
+  .sb-rs {
+    display: block;
+  }
+  .product-card .card .card-image-flexed {
+    height: 100%;
+  }
+  .update-cards .card {
+    margin-bottom: 20px;
+  }
+  .swiper-slide .card .card-image-flexed {
+    height: 230px !important;
+  }
+  .alignItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mb-rs {
+    margin-bottom: 20px !important;
+  }
+  .react-tabs__tab {
+    margin: auto 6px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .form--card {
+    width: 250px !important;
+  }
+}
