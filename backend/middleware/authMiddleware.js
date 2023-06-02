@@ -8,7 +8,7 @@ const protect = expressAsyncHandler(async (requset, response, next) => {
     if (authorization && authorization.startsWith("Bearer")) {
         try {
             token = authorization.split(" ")[1];
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
             requset.user = await User.findById(decoded.id).select("-password")
 
             console.log(decoded);
